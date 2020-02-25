@@ -1,14 +1,14 @@
 module.exports = function(grunt){
   grunt.initConfig({
-    htmlhint:{
+    csslint:{
       options:{
-        htmlhintrc:'./.htmlhintrc'
+        csslintrc:'./.csslintrc'
       },
-      src: ['*.html']
+      src: ['*.css']
     }
   });//插件构建的具体配置信息
 
-  grunt.loadNpmTasks('grunt-htmlhint');//加载插件
+  grunt.loadNpmTasks('grunt-contrib-csslint');//加载插件
 
-  grunt.registerTask('default',['htmlhint']);//构建任务清单
+  grunt.registerTask('default',['csslint']);//构建任务清单
 };
